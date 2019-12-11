@@ -42,7 +42,7 @@ key PostToDiscord(key AvatarID, string Message)
     return llHTTPRequest(WEBHOOK_URL + WEBHOOK_CHANNEL + "/" + WEBHOOK_TOKEN + query_string, 
     [ 
         HTTP_METHOD, "POST", 
-        HTTP_MIMETYPE, "application/x-www-form-urlencoded",
+        HTTP_MIMETYPE, "application/json",
         HTTP_VERIFY_CERT,TRUE,
         HTTP_VERBOSE_THROTTLE, TRUE,
         HTTP_PRAGMA_NO_CACHE, TRUE ], llList2Json(JSON_OBJECT, json));
